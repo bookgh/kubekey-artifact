@@ -27,14 +27,18 @@ jobs:
           sudo lsblk
           sudo du -sh ./
           sudo ls *
-          sudo sleep 999
+          sudo pwd
+          sudo free -m
+          sudo lscpu
 
       - name: Setup KubeKey
         run: |
+          sudo cd /mnt
           sudo curl -sfL https://get-kk.kubesphere.io | sh -
 
       - name: Export
         run: |
+          sudo cd /mnt
           sudo cat manifest.yaml > example.yaml
           sudo sed -i "s@REGISTRY@${{ secrets.REGISTRY }}@g" manifest.yaml
           sudo sed -i "s@USERNAME@${{ secrets.DOCKER_USERNAME }}@g" manifest.yaml
