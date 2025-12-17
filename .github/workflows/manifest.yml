@@ -23,6 +23,14 @@ jobs:
 
       - name: Setup KubeKey
         run: |
+          sudo df -hT
+          sudo lsblk
+          sudo du -sh ./
+          sudo ls *
+          sudo sleep 999
+
+      - name: Setup KubeKey
+        run: |
           sudo curl -sfL https://get-kk.kubesphere.io | sh -
 
       - name: Export
