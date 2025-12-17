@@ -8,6 +8,8 @@ jobs:
   build:
     name: Artifact-Export 
     runs-on: ubuntu-latest
+    env:
+      VERSION: "latest"
     steps:
       - name: Check Out Code
         uses: actions/checkout@v2
