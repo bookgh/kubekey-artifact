@@ -25,9 +25,9 @@ jobs:
         run: |
           sudo df -hT
           sudo lsblk
-          sudo du -sh ./
-          sudo ls *
+          sudo du -sh /*
           sudo pwd
+          sudo ls
           sudo free -m
           sudo lscpu
 
