@@ -46,16 +46,16 @@ spec:
       provisioner_image:
         tag: 4.2.0
     nfs_provisioner_version: 4.3.0
-  ## 镜像仓库拉取速率限制
-  # cri:
-  #   registry:
-  #     auths:
-  #       # 拉取镜像时需访问的镜像仓库，如 docker.io
-  #       - repo: REGISTRY
-  #         # 如 docker.io 的登录账户
-  #         username: USERNAME
-  #         # 如 docker.io 的登录密码
-  #         password: PASSWORD
+  # 镜像仓库拉取速率限制
+  cri:
+    registry:
+      auths:
+        # 拉取镜像时需访问的镜像仓库，如 docker.io
+        - repo: REGISTRY
+          # 如 docker.io 的登录账户
+          username: USERNAME
+          # 如 docker.io 的登录密码
+          password: PASSWORD
   image_manifests:
   # kubernetes-v1.33.4
   - docker.io/calico/apiserver:v3.28.2
