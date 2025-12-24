@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: Artifact-Export 
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-24.04
     env:
       VERSION: "latest"
     steps:
