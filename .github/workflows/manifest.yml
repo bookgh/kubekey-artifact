@@ -27,6 +27,7 @@ jobs:
 
       - name: Export
         run: |
+          sudo rm -rf /home/runner/actions-runner/cached
           sudo cat manifest.yaml > example.yaml
           sudo sed -i "s@REGISTRY@${{ secrets.REGISTRY }}@g" manifest.yaml
           sudo sed -i "s@USERNAME@${{ secrets.DOCKER_USERNAME }}@g" manifest.yaml
